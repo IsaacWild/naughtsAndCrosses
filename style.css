@@ -1,0 +1,59 @@
+:root{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    margin:0;
+}
+
+.pageWrapper{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 1fr 4fr;
+}
+
+.headerWrapper{
+    display: grid;
+    /* align-items: center; */
+    /* justify-content: center; */
+    text-align: center;
+    grid-template-columns: 1fr 4fr;
+    height: 200px;
+    width: 100vw;
+    grid-row: 1/2;
+    background-color: hsl(0, 0%, 90%)
+}
+
+.logo{
+    background-color: hsl(16, 100%, 66%);
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    background-color: hsl(120, 50%, 80%);
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.title p:hover{
+    transform: translate(5px, -5px) rotate(360deg);
+    color: red;
+    transition: 0.8s;
+    font-size: 24px;
+}
+
+.gameWrapper{
+    grid-row: 2/3;
+    height: 100%;
+    background-color: hsl(0, 0%, 60%);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
