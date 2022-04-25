@@ -12,12 +12,9 @@ body{
 }
 
 .headerWrapper{
-
     display: grid;
-    /* align-items: center; */
-    /* justify-content: center; */
     text-align: center;
-    height: 400px;
+    height: 250px;
     grid-row: 1/2;
     background-color: hsl(0, 0%, 90%);
 }
@@ -33,7 +30,7 @@ body{
     width: 150px;
     height: 150px;
     padding: 1rem;
-
+    border: dashed hsl(0, 100%, 50%);
 }
 
 .title{
@@ -42,6 +39,8 @@ body{
     display: grid;
     align-items: center;
     justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 /* .title p:hover{
