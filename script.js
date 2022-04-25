@@ -2,12 +2,12 @@
 
 const gameTitle = document.querySelector('.title');
 
-const gameBoard = () => {
+const gameBoard = (() => {
     const changeTitle = () => gameTitle.textContent = 'Test';
     const sayHi = () => alert('Hello!!'); 
     const hiLog = () => console.log('This is a test log!')
     return { changeTitle, hiLog };
-};
+})();
 
 gameBoard.changeTitle();
 gameBoard.sayHi();
@@ -26,3 +26,5 @@ gameBoard.hiLog();
         
     }
 })()
+
+console.log('test');
