@@ -73,6 +73,7 @@ body{
 .footer{
     grid-row: 4/5;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 15px;
@@ -114,4 +115,22 @@ body{
 .nought{
     background-image: url(img/nought.svg);
     background-size: contain;
+}
+
+button{
+    border: none;
+    border-radius: 100%;
+    width: 4rem;
+    padding: 1rem;
+    justify-self: center;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.8s;
+}
+
+button:hover{
+    background-color: hsl(18, 100%, 60);
+}
+
+.markerChoice img{
+    height: 1.4rem;
 }
