@@ -2,22 +2,29 @@
 //This works!!
 const gameBoard = (() => {
 
-    let gamePlay = ['O','X','','O','X','','','',''];
+    let gamePlay = ['o','x','','o','x','','','',''];
 
     const gameGrid = document.querySelector('.gameWrapper')
 
     const _render = () => {
-        for (let i = 0; i < 9; i++) {
-            const gameBox = document.createElement('div');
-            const gamePiece = document.createElement('p')
+        for (let i = 0; i < gamePlay.length; i++) {
+            const gameBox = document.createElement('div')
             gameBox.classList.add('gameBox');
             gameBox.setAttribute('id',`box${i}`);
-            gameBox.appendChild(gamePiece);
             gameGrid.appendChild(gameBox);
+            gameBox.addEventListener('click', ()=>{
+                gameBox.classList.toggle('cross')
+                //needs to be based of current player
+            })
         }
     }
     _render();
 
-    return { gamePlay }
-
 })();
+
+
+const player = (name, marker) => {
+    name = _getName || 'player 1';
+    marker = _getMarker;
+    //need to get current player from button selection from top
+}
