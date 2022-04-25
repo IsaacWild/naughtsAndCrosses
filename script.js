@@ -7,7 +7,9 @@ const gameBoard = (() => {
     const _render = () => {
         for (let i = 0; i < 9; i++) {
             const gameBox = document.createElement('div');
+            const gamePiece = document.childElement('p')
             gameBox.classList.add('gameBox');
+            gameBox.appendChild(gamePiece);
             gameGrid.appendChild(gameBox);
         }
     }
@@ -19,5 +21,3 @@ const gameBoard = (() => {
 
     return { changeTitle, hiLog };
 })();
-
-console.log('test');
