@@ -17,8 +17,7 @@ body{
     /* align-items: center; */
     /* justify-content: center; */
     text-align: center;
-    grid-template-columns: 1fr 4fr;
-    height: 250px;
+    height: 400px;
     grid-row: 1/2;
     background-color: hsl(0, 0%, 90%);
 }
@@ -31,8 +30,8 @@ body{
     color: black;
 }
 .logo img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     padding: 1rem;
 
 }
