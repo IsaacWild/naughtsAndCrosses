@@ -48,8 +48,7 @@ body{
     height: 100%;
     background-color: hsl(80, 15%, 80%);
     display: grid;
-    grid-template-columns: repeat(3, clamp(50xp, 100% , 500px));
-    grid-template-rows: repeat(3, clamp(50xp, 100% , 500px));
+    grid-template-columns: repeat(3, minmax(50px, 500px));
     align-items: center;
     justify-content: center;
 }
