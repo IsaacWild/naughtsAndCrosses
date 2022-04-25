@@ -43,18 +43,13 @@ body{
     font-size: 1.5rem;
 }
 
-/* .title p:hover{
-    transform: translate(5px, -5px) rotate(360deg);
-    color: red;
-    transition: 0.8s;
-    font-size: 24px;
-} */
-
 .gameWrapper{
     grid-row: 2/3;
     height: 100%;
     background-color: hsl(80, 15%, 80%);
     display: grid;
+    grid-template-columns: repeat(3, clamp(50xp, 100% , 500px));
+    grid-template-rows: repeat(3, clamp(50xp, 100% , 500px));
     align-items: center;
     justify-content: center;
 }
@@ -65,4 +60,11 @@ body{
     justify-content: center;
     font-size: 15px;
     background-color: hsl(80, 15%, 70%);
+}
+
+.gameBox{
+    padding: 1rem;
+    box-shadow: inset 0 0 0.8em  rgba(0, 0, 0, 1);
+    height: 150px;
+    width: 150px;
 }
