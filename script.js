@@ -17,11 +17,11 @@ const gameBoard = (() => {
             markerImgBox.classList.add('crossImg')
             gameBox.appendChild(markerImgBox)
             gameBox.addEventListener('click', ()=>{
-                if(playerMarker == 'x'){
-                    gameBox.classList.toggle('cross')
+                if(this.playerMarker == 'x'){
+                    markerImgBox.classList.toggle('cross')
                     console.log('cross test');
-                }else if (playerMarker == 'o'){
-                    gameBox.classList.toggle('nought')
+                }else if (this.playerMarker == 'o'){
+                    markerImgBox.classList.toggle('nought')
                     console.log('nought test')
                 }
             })
