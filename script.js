@@ -2,8 +2,8 @@
 //This works!!
 const gameBoard = (() => {
 
-    let gamePlay = ['o','x','','o','x','','','',''];
-    let playerMarker ='';
+    let gamePlay = ['','','','','','','','',''];
+    let playerMarker = '';
 
     const gameGrid = document.querySelector('.gameWrapper')
 
@@ -14,31 +14,65 @@ const gameBoard = (() => {
             gameBox.setAttribute('id',`box${i}`);
             gameGrid.appendChild(gameBox);
             const markerImgBox = document.createElement('img')
-            markerImgBox.classList.add('crossImg')
+            markerImgBox.classList.add('emptyBox')
             gameBox.appendChild(markerImgBox)
             gameBox.addEventListener('click', ()=>{
                 if(this.playerMarker == 'x'){
-                    markerImgBox.classList.toggle('cross')
-                    console.log('cross test');
+                    gamePlay.splice(i,1,'x');
+                    markerImgBox.classList.add('cross', 'selectedBox');
+                    checkWin(gamePlay);
                 }else if (this.playerMarker == 'o'){
-                    markerImgBox.classList.toggle('nought')
-                    console.log('nought test')
+                    gamePlay.splice(i,1,'o');
+                    markerImgBox.classList.add('nought', 'selectedBox');
+                    checkWin(gamePlay);
                 }
             })
+            if(gamePlay[i] == 'x'){
+                markerImgBox.classList.add('cross')
+            }else if (gamePlay[i] == 'o'){
+                markerImgBox.classList.add('nought')
+            }
         }
     }
+    
     _render();
-
+    return{ gamePlay }
 })();
 
 //sets player marker
 const player = (() => {
     const btnCross = document.querySelector('.btnCross');
     const btnNought = document.querySelector('.btnNought');
-    btnCross.addEventListener('click', ()=>{
-        this.playerMarker = 'x';        
+    btnCross.addEventListener('click', ()=> {
+        if(this.playerMarker == null){
+            this.playerMarker = 'x';
+            btnCross.classList.toggle('selectedMarker')
+            console.log('cross selected')
+        }
     })
-    btnNought.addEventListener('click', ()=>{
+    btnNought.addEventListener('click', ()=> {
+        if(this.playerMarker == null){
         this.playerMarker = 'o';
+        btnNought.classList.toggle('selectedMarker')
+        console.log('nought selected')
+        }  
     })
+    
 })();
+
+
+const checkWin = (gamePlay) => {
+    const winners = {
+        win1: []
+        //ect...
+    }
+    console.log('test')
+    console.log(gamePlay)
+    if(gamePlay == win){
+        // const equals = (a, b) =>
+        // a.length === b.length &&
+        // a.every((v, i) => v === b[i]);
+    }
+    console.log(win)
+    return {win}
+};
