@@ -3,6 +3,7 @@
 const gameBoard = (() => {
 
     let gamePlay = ['o','x','','o','x','','','',''];
+    let playerMarker ='';
 
     const gameGrid = document.querySelector('.gameWrapper')
 
@@ -12,9 +13,15 @@ const gameBoard = (() => {
             gameBox.classList.add('gameBox');
             gameBox.setAttribute('id',`box${i}`);
             gameGrid.appendChild(gameBox);
+            const markerImgBox = document.createElement('img')
+            markerImgBox.classList.add('crossImg')
+            gameBox.appendChild(markerImgBox)
             gameBox.addEventListener('click', ()=>{
-                gameBox.classList.toggle('cross')
-                //needs to be based of current player
+                if(playerMarker == 'x'){
+                    gameBox.classList.toggle('cross')
+                }else if (playerMarker == 'o'){
+                gameBox.classList.toggle('nought')
+                }
             })
         }
     }
@@ -22,9 +29,20 @@ const gameBoard = (() => {
 
 })();
 
-
 const player = (name, marker) => {
     name = _getName || 'player 1';
-    marker = _getMarker;
-    //need to get current player from button selection from top
+    marker = (() => {
+        const btnCross = document.querySelector('.btnCross');
+    const btnNought = document.querySelector('.btnNought');
+    btnCross.addEventListener('click', ()=>{
+        playerMarker='x';
+    })
+    btnCross.addEventListener('click', ()=>{
+        playerMarker='o';
+    })
+    })();
+    //need to get current player from button selection from top   
 }
+
+
+player();
