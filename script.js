@@ -19,8 +19,10 @@ const gameBoard = (() => {
             gameBox.addEventListener('click', ()=>{
                 if(playerMarker == 'x'){
                     gameBox.classList.toggle('cross')
+                    console.log('cross test');
                 }else if (playerMarker == 'o'){
-                gameBox.classList.toggle('nought')
+                    gameBox.classList.toggle('nought')
+                    console.log('nought test')
                 }
             })
         }
@@ -34,7 +36,7 @@ const player = (() => {
     const btnCross = document.querySelector('.btnCross');
     const btnNought = document.querySelector('.btnNought');
     btnCross.addEventListener('click', ()=>{
-        this.playerMarker = 'x';
+        this.playerMarker = 'x';        
     })
     btnNought.addEventListener('click', ()=>{
         this.playerMarker = 'o';

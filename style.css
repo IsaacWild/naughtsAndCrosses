@@ -127,6 +127,13 @@ button:hover{
     transform: translate(4px, -4px);
 }
 
+button:active{
+    background-color: hsl(37, 100%, 60%);
+    box-shadow: -4px 4px 3px hsl(10, 91%, 56%);
+    transform: translate(2px, -2px);
+    transition: 0.1s;
+}
+
 .markerChoice img{
     height: 1.4rem;
 }
