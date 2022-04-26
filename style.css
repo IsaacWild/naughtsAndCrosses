@@ -90,6 +90,11 @@ body{
     background-color: hsl(40, 90%, 96%);
 }
 
+.gameBox img{
+    height: 80%;
+    width: 80%;
+}
+
 /* Need to program based on marker selection */
 /* .crossImg:hover{
     content: url(img/cross.svg);
