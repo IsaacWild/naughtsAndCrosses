@@ -41,8 +41,9 @@ const player = (name, marker) => {
         playerMarker='o';
     })
     })();
+    return {marker}
     //need to get current player from button selection from top   
 }
 
 
-player();
+player.marker();
