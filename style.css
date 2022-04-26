@@ -83,7 +83,7 @@ body{
 
 .gameBox{
     width: 100%;
-    aspect-ratio: auto 1 / 1;
+    padding-bottom: 100%;
     display: grid;
     font-size: 2rem;
     transition: 0.3s;
