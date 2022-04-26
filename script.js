@@ -29,21 +29,14 @@ const gameBoard = (() => {
 
 })();
 
-const player = (name, marker) => {
-    name = _getName() || 'player 1';
-    marker = (() => {
-        const btnCross = document.querySelector('.btnCross');
+//sets player marker
+const player = (() => {
+    const btnCross = document.querySelector('.btnCross');
     const btnNought = document.querySelector('.btnNought');
     btnCross.addEventListener('click', ()=>{
-        playerMarker='x';
+        this.playerMarker = 'x';
     })
     btnCross.addEventListener('click', ()=>{
-        playerMarker='o';
+        this.playerMarker = 'o';
     })
-    })();
-    return {marker}
-    //need to get current player from button selection from top   
-}
-
-
-player.marker();
+})();
