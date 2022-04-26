@@ -36,7 +36,7 @@ const player = (() => {
     btnCross.addEventListener('click', ()=>{
         this.playerMarker = 'x';
     })
-    btnCross.addEventListener('click', ()=>{
+    btnNought.addEventListener('click', ()=>{
         this.playerMarker = 'o';
     })
 })();
