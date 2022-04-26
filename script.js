@@ -30,7 +30,7 @@ const gameBoard = (() => {
 })();
 
 const player = (name, marker) => {
-    name = _getName || 'player 1';
+    name = _getName() || 'player 1';
     marker = (() => {
         const btnCross = document.querySelector('.btnCross');
     const btnNought = document.querySelector('.btnNought');
