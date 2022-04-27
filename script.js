@@ -42,16 +42,16 @@ const gameBoard = (() => {
                     markerImgBox.classList.add('cross', 'selectedBox');
                     checkWin(gamePlay);
                     playerMarker = 'o';
-                    btnCross.classList.toggle('selectedMarker')
-                    btnNought.classList.toggle('selectedMarker')
+                    this.btnCross.classList.toggle('selectedMarker')
+                    this.btnNought.classList.toggle('selectedMarker')
                     console.log('changed to: ' + playerMarker)
                 }else if (this.playerMarker == 'o'){
                     gamePlay.splice(i,1,'o');
                     markerImgBox.classList.add('nought', 'selectedBox');
                     checkWin(gamePlay);
                     playerMarker = 'x';
-                    btnCross.classList.toggle('selectedMarker')
-                    btnNought.classList.toggle('selectedMarker')
+                    this.btnCross.classList.toggle('selectedMarker')
+                    this.btnNought.classList.toggle('selectedMarker')
                     console.log('changed to: ' + playerMarker)
                 }
             })
