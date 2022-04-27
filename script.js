@@ -22,11 +22,17 @@ const gameBoard = (() => {
                     markerImgBox.classList.add('cross', 'selectedBox');
                     checkWin(gamePlay);
                     playerMarker = 'o';
+                    player.btnCross.classList.toggle('selectedMarker')
+                    player.btnNought.classList.toggle('selectedMarker')
+                    console.log('changed to: ' + playerMarker)
                 }else if (this.playerMarker == 'o'){
                     gamePlay.splice(i,1,'o');
                     markerImgBox.classList.add('nought', 'selectedBox');
                     checkWin(gamePlay);
                     playerMarker = 'x';
+                    btnCross.classList.toggle('selectedMarker')
+                    btnNought.classList.toggle('selectedMarker')
+                    console.log('changed to: ' + playerMarker)
                 }
             })
             if(gamePlay[i] == 'x'){
@@ -49,14 +55,12 @@ const player = (() => {
         if(this.playerMarker == null){
             this.playerMarker = 'x';
             btnCross.classList.toggle('selectedMarker')
-            console.log('cross selected')
         }
     })
     btnNought.addEventListener('click', ()=> {
         if(this.playerMarker == null){
         this.playerMarker = 'o';
         btnNought.classList.toggle('selectedMarker')
-        console.log('nought selected')
         }  
     })
 })();
