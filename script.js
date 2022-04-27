@@ -22,18 +22,18 @@ const gameBoard = (() => {
                     gamePlay.splice(i,1,'x');
                     markerImgBox.classList.add('cross', 'selectedBox');
                     checkWin(gamePlay);
-                    playerMarker = 'o';
+                    this.playerMarker = 'o';
                     btnCross.classList.toggle('selectedMarker')
                     btnNought.classList.toggle('selectedMarker')
-                    console.log('changed to: ' + playerMarker)
+                    console.log('changed to: ' + this.playerMarker)
                 }else if (this.playerMarker == 'o'){
                     gamePlay.splice(i,1,'o');
                     markerImgBox.classList.add('nought', 'selectedBox');
                     checkWin(gamePlay);
-                    playerMarker = 'x';
+                    this.playerMarker = 'x';
                     btnCross.classList.toggle('selectedMarker')
                     btnNought.classList.toggle('selectedMarker')
-                    console.log('changed to: ' + playerMarker)
+                    console.log('changed to: ' + this.playerMarker)
                 }
             })
             if(gamePlay[i] == 'x'){
