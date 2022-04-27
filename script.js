@@ -44,23 +44,23 @@ const gameBoard = (() => {
         }
     }    
     _render();
-    return{ gamePlay ,btnCross, btnNought }
+    return{ gamePlay}
 })();
 
 //sets player marker
 const player = (() => {
-    // const btnCross = document.querySelector('.btnCross');
-    // const btnNought = document.querySelector('.btnNought');
-    this.btnCross.addEventListener('click', ()=> {
+    const btnCross = document.querySelector('.btnCross');
+    const btnNought = document.querySelector('.btnNought');
+    btnCross.addEventListener('click', ()=> {
         if(this.playerMarker == null){
             this.playerMarker = 'x';
-            this.btnCross.classList.toggle('selectedMarker')
+            btnCross.classList.toggle('selectedMarker')
         }
     })
-    this.btnNought.addEventListener('click', ()=> {
+    btnNought.addEventListener('click', ()=> {
         if(this.playerMarker == null){
         this.playerMarker = 'o';
-        this.btnNought.classList.toggle('selectedMarker')
+        btnNought.classList.toggle('selectedMarker')
         }  
     })
 })();
