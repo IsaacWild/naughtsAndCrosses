@@ -52,13 +52,13 @@ const gameBoard = (() => {
 const player = (() => {
     // const btnCross = document.querySelector('.btnCross');
     // const btnNought = document.querySelector('.btnNought');
-    btnCross.addEventListener('click', ()=> {
+    this.btnCross.addEventListener('click', ()=> {
         if(this.playerMarker == null){
             this.playerMarker = 'x';
             this.btnCross.classList.toggle('selectedMarker')
         }
     })
-    btnNought.addEventListener('click', ()=> {
+    this.btnNought.addEventListener('click', ()=> {
         if(this.playerMarker == null){
         this.playerMarker = 'o';
         this.btnNought.classList.toggle('selectedMarker')
