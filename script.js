@@ -114,7 +114,7 @@ const checkWin = (gamePlay) => {
     }else
     
     for (var i = 0; i < gamePlay.length; i++) {
-        let playString = playString + gamePlay[i]
+        playString = playString + gamePlay[i]
     }
     if (playString.length == 9){
         console.log('tie')
