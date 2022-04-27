@@ -65,7 +65,7 @@ const checkWin = (gamePlay) => {
     console.log('test')
     let a = gamePlay[0]
     let b = gamePlay[1]
-    let b = gamePlay[2]
+    let c = gamePlay[2]
 
     if ((a && b && c == 'x') || (a && b && c == 'o')){
         console.log('win')
@@ -79,5 +79,4 @@ const checkWin = (gamePlay) => {
     //     a.every((v, i) => v === b[i]);
     // }
     console.log(win)
-    return {win}
 };
