@@ -112,9 +112,9 @@ const checkWin = (gamePlay) => {
     if ((a && b && c == 'x') || (a && b && c == 'o')){
         console.log('win')
     }else
-    
     for (var i = 0; i < gamePlay.length; i++) {
         playString = playString + gamePlay[i]
+        console.log(playString)
     }
     if (playString.length == 9){
         console.log('tie')
