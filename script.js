@@ -42,10 +42,9 @@ const gameBoard = (() => {
                 markerImgBox.classList.add('nought')
             }
         }
-    }
-    
+    }    
     _render();
-    return{ gamePlay }
+    return{ gamePlay ,btnCross, btnNought }
 })();
 
 //sets player marker
