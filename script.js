@@ -66,6 +66,7 @@ const checkWin = (gamePlay) => {
     let a = gamePlay[0]
     let b = gamePlay[1]
     let c = gamePlay[2]
+    let playString = '';
     if ((a && b && c == 'x') || (a && b && c == 'o')){
         return console.log('win')
     }else
@@ -111,7 +112,7 @@ const checkWin = (gamePlay) => {
     if ((a && b && c == 'x') || (a && b && c == 'o')){
         console.log('win')
     }else
-    let playString = ''
+    
     for (var i = 0; i < gamePlay.length; i++) {
         let playString = playString + gamePlay[i]
     }
