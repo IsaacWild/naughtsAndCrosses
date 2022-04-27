@@ -4,7 +4,8 @@ const gameBoard = (() => {
 
     let gamePlay = ['','','','','','','','',''];
     let playerMarker = '';
-
+    const btnCross = document.querySelector('.btnCross');
+    const btnNought = document.querySelector('.btnNought');
     const gameGrid = document.querySelector('.gameWrapper')
 
     const _render = () => {
@@ -22,16 +23,16 @@ const gameBoard = (() => {
                     markerImgBox.classList.add('cross', 'selectedBox');
                     checkWin(gamePlay);
                     playerMarker = 'o';
-                    this.btnCross.classList.toggle('selectedMarker')
-                    this.btnNought.classList.toggle('selectedMarker')
+                    btnCross.classList.toggle('selectedMarker')
+                    btnNought.classList.toggle('selectedMarker')
                     console.log('changed to: ' + playerMarker)
                 }else if (this.playerMarker == 'o'){
                     gamePlay.splice(i,1,'o');
                     markerImgBox.classList.add('nought', 'selectedBox');
                     checkWin(gamePlay);
                     playerMarker = 'x';
-                    this.btnCross.classList.toggle('selectedMarker')
-                    this.btnNought.classList.toggle('selectedMarker')
+                    btnCross.classList.toggle('selectedMarker')
+                    btnNought.classList.toggle('selectedMarker')
                     console.log('changed to: ' + playerMarker)
                 }
             })
@@ -49,18 +50,18 @@ const gameBoard = (() => {
 
 //sets player marker
 const player = (() => {
-    let btnCross = document.querySelector('.btnCross');
-    let btnNought = document.querySelector('.btnNought');
+    // const btnCross = document.querySelector('.btnCross');
+    // const btnNought = document.querySelector('.btnNought');
     btnCross.addEventListener('click', ()=> {
         if(this.playerMarker == null){
             this.playerMarker = 'x';
-            btnCross.classList.toggle('selectedMarker')
+            this.btnCross.classList.toggle('selectedMarker')
         }
     })
     btnNought.addEventListener('click', ()=> {
         if(this.playerMarker == null){
         this.playerMarker = 'o';
-        btnNought.classList.toggle('selectedMarker')
+        this.btnNought.classList.toggle('selectedMarker')
         }  
     })
 })();
