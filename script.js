@@ -49,8 +49,8 @@ const gameBoard = (() => {
 
 //sets player marker
 const player = (() => {
-    const btnCross = document.querySelector('.btnCross');
-    const btnNought = document.querySelector('.btnNought');
+    let btnCross = document.querySelector('.btnCross');
+    let btnNought = document.querySelector('.btnNought');
     btnCross.addEventListener('click', ()=> {
         if(this.playerMarker == null){
             this.playerMarker = 'x';
