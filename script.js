@@ -66,16 +66,56 @@ const checkWin = (gamePlay) => {
     let a = gamePlay[0]
     let b = gamePlay[1]
     let c = gamePlay[2]
-
+    if ((a && b && c == 'x') || (a && b && c == 'o')){
+        return console.log('win')
+    }else
+    a = gamePlay[3]
+    b = gamePlay[4]
+    c = gamePlay[5]
     if ((a && b && c == 'x') || (a && b && c == 'o')){
         console.log('win')
+    }else
+    a = gamePlay[6]
+    b = gamePlay[7]
+    c = gamePlay[8]
+    if ((a && b && c == 'x') || (a && b && c == 'o')){
+        console.log('win')
+    }else
+    a = gamePlay[0]
+    b = gamePlay[3]
+    c = gamePlay[6]
+    if ((a && b && c == 'x') || (a && b && c == 'o')){
+        console.log('win')
+    }else
+    a = gamePlay[1]
+    b = gamePlay[4]
+    c = gamePlay[7]
+    if ((a && b && c == 'x') || (a && b && c == 'o')){
+        console.log('win')
+    }else
+    a = gamePlay[2]
+    b = gamePlay[5]
+    c = gamePlay[8]
+    if ((a && b && c == 'x') || (a && b && c == 'o')){
+        console.log('win')
+    }else
+    a = gamePlay[0]
+    b = gamePlay[4]
+    c = gamePlay[8]
+    if ((a && b && c == 'x') || (a && b && c == 'o')){
+        console.log('win')
+    }else
+    a = gamePlay[2]
+    b = gamePlay[4]
+    c = gamePlay[6]
+    if ((a && b && c == 'x') || (a && b && c == 'o')){
+        console.log('win')
+    }else
+    let playString = ''
+    for (var i = 0; i < gamePlay.length; i++) {
+        let playString = playString + gamePlay[i]
     }
-    
-    
-    
-    // if(gamePlay == win){
-    //     const equals = (a, b) =>
-    //     a.length === b.length &&
-    //     a.every((v, i) => v === b[i]);
-    // }
+    if (playString.length == 9){
+        console.log('tie')
+    }
 };
