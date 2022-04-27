@@ -138,6 +138,27 @@ body{
     transform: translate(2px, -2px);
 }
 
+.btnStartGame{
+    border: none;
+    border-radius: 20%;
+    width: 5rem;
+    padding: 1rem;
+    transition: 0.2s;
+    background-color: hsl(37, 100%, 60%);
+}
+
+.btnStartGame:hover{
+    background-color: hsl(18, 100%, 60%);
+    box-shadow: -4px 4px 3px hsl(18, 100%, 35%);
+    transform: translate(4px, -4px);
+}
+
+.btnStartGame:active{
+    background-color: hsl(37, 100%, 60%);
+    box-shadow: -4px 4px 3px hsl(10, 91%, 56%);
+    transform: translate(2px, -2px);
+}
+
 .markerChoice img{
     height: 1.4rem;
 }
@@ -145,4 +166,25 @@ body{
 .selectedMarker{
     background-color: hsl(18, 100%, 55%);
     box-shadow: -2px 2px 1px hsl(18, 100%, 35%);
+}
+
+.overlayName{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+    /* position:absolute;
+    top:50vh;
+    left:0px;
+    width:100vw;
+    height:0vh;
+    background:rgba(0,0,0,0.8);
+    z-index: -1;
+    opacity: 0;
+    padding: 80px 50px 0px 10px;
+    overflow:scroll;
+    box-sizing: border-box;
+    transition: top 500ms ease-in-out,
+                opacity 500ms ease-in-out,
+                height 0ms ease-in-out 500ms; */
 }
