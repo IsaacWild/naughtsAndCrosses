@@ -62,17 +62,22 @@ const player = (() => {
 
 
 const checkWin = (gamePlay) => {
-    const winners = {
-        win1: []
-        //ect...
-    }
     console.log('test')
-    console.log(gamePlay)
-    if(gamePlay == win){
-        // const equals = (a, b) =>
-        // a.length === b.length &&
-        // a.every((v, i) => v === b[i]);
+    let a = gamePlay[0]
+    let b = gamePlay[1]
+    let b = gamePlay[2]
+
+    if ((a && b && c == 'x') || (a && b && c == 'o')){
+        console.log('win')
     }
+    
+    
+    
+    // if(gamePlay == win){
+    //     const equals = (a, b) =>
+    //     a.length === b.length &&
+    //     a.every((v, i) => v === b[i]);
+    // }
     console.log(win)
     return {win}
 };
