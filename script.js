@@ -57,7 +57,6 @@ const player = (() => {
         console.log('nought selected')
         }  
     })
-    return{playerMarker}
 })();
 
 
@@ -67,56 +66,71 @@ const checkWin = (gamePlay) => {
     let b = gamePlay[1]
     let c = gamePlay[2]
     let playString = '';
-    if ((a && b && c == 'x') || (a && b && c == 'o')){
-        return console.log('win')
-    }else
-    a = gamePlay[3]
-    b = gamePlay[4]
-    c = gamePlay[5]
-    if ((a && b && c == 'x') || (a && b && c == 'o')){
-        console.log('win')
-    }else
-    a = gamePlay[6]
-    b = gamePlay[7]
-    c = gamePlay[8]
-    if ((a && b && c == 'x') || (a && b && c == 'o')){
-        console.log('win')
-    }else
-    a = gamePlay[0]
-    b = gamePlay[3]
-    c = gamePlay[6]
-    if ((a && b && c == 'x') || (a && b && c == 'o')){
-        console.log('win')
-    }else
-    a = gamePlay[1]
-    b = gamePlay[4]
-    c = gamePlay[7]
-    if ((a && b && c == 'x') || (a && b && c == 'o')){
-        console.log('win')
-    }else
-    a = gamePlay[2]
-    b = gamePlay[5]
-    c = gamePlay[8]
-    if ((a && b && c == 'x') || (a && b && c == 'o')){
-        console.log('win')
-    }else
-    a = gamePlay[0]
-    b = gamePlay[4]
-    c = gamePlay[8]
-    if ((a && b && c == 'x') || (a && b && c == 'o')){
-        console.log('win')
-    }else
-    a = gamePlay[2]
-    b = gamePlay[4]
-    c = gamePlay[6]
-    if ((a && b && c == 'x') || (a && b && c == 'o')){
-        console.log('win')
-    }else
     for (var i = 0; i < gamePlay.length; i++) {
         playString = playString + gamePlay[i]
         console.log(playString)
     }
     if (playString.length == 9){
         console.log('tie')
-    }
+    }else if (a && b && c == 'x'){
+        return console.log("X win's")
+    } else if (a && b && c == 'o'){
+        return console.log("O win's")
+    }else
+    a = gamePlay[3]
+    b = gamePlay[4]
+    c = gamePlay[5]
+    if (a && b && c == 'x'){
+        return console.log("X win's")
+    } else if (a && b && c == 'o'){
+        return console.log("O win's")
+    }else
+    a = gamePlay[6]
+    b = gamePlay[7]
+    c = gamePlay[8]
+    if (a && b && c == 'x'){
+        return console.log("X win's")
+    } else if (a && b && c == 'o'){
+        return console.log("O win's")
+    }else
+    a = gamePlay[0]
+    b = gamePlay[3]
+    c = gamePlay[6]
+    if (a && b && c == 'x'){
+        return console.log("X win's")
+    } else if (a && b && c == 'o'){
+        return console.log("O win's")
+    }else
+    a = gamePlay[1]
+    b = gamePlay[4]
+    c = gamePlay[7]
+    if (a && b && c == 'x'){
+        return console.log("X win's")
+    } else if (a && b && c == 'o'){
+        return console.log("O win's")
+    }else
+    a = gamePlay[2]
+    b = gamePlay[5]
+    c = gamePlay[8]
+    if (a && b && c == 'x'){
+        return console.log("X win's")
+    } else if (a && b && c == 'o'){
+        return console.log("O win's")
+    }else
+    a = gamePlay[0]
+    b = gamePlay[4]
+    c = gamePlay[8]
+    if (a && b && c == 'x'){
+        return console.log("X win's")
+    } else if (a && b && c == 'o'){
+        return console.log("O win's")
+    }else
+    a = gamePlay[2]
+    b = gamePlay[4]
+    c = gamePlay[6]
+    if (a && b && c == 'x'){
+        return console.log("X win's")
+    } else if (a && b && c == 'o'){
+        return console.log("O win's")
+    }  
 };
