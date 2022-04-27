@@ -21,10 +21,14 @@ const gameBoard = (() => {
                     gamePlay.splice(i,1,'x');
                     markerImgBox.classList.add('cross', 'selectedBox');
                     checkWin(gamePlay);
+                    playerMarker = 'o';
+                    player();
                 }else if (this.playerMarker == 'o'){
                     gamePlay.splice(i,1,'o');
                     markerImgBox.classList.add('nought', 'selectedBox');
                     checkWin(gamePlay);
+                    playerMarker = 'x';
+                    player();
                 }
             })
             if(gamePlay[i] == 'x'){
@@ -150,3 +154,7 @@ const checkWin = (gamePlay) => {
         return console.log('tie')
     }
 };
+
+const showWin = () => {
+
+}
