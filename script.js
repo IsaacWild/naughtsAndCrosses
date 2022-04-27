@@ -78,5 +78,4 @@ const checkWin = (gamePlay) => {
     //     a.length === b.length &&
     //     a.every((v, i) => v === b[i]);
     // }
-    console.log(win)
 };
