@@ -70,9 +70,7 @@ const checkWin = (gamePlay) => {
         playString = playString + gamePlay[i]
         console.log(playString)
     }
-    if (playString.length == 9){
-        return console.log('tie')
-    }else if (a == 'x' && b == 'x' && c == 'x'){
+    if (a == 'x' && b == 'x' && c == 'x'){
         console.log(a,b,c)
         return console.log("X win's")
     } else if (a == 'o' && b == 'o' && c == 'o'){
@@ -148,5 +146,7 @@ const checkWin = (gamePlay) => {
     } else if (a == 'o' && b == 'o' && c === 'o'){
         console.log(a,b,c)
         return console.log("O win's")
-    }  
+    }else if (playString.length == 9){
+        return console.log('tie')
+    }
 };
