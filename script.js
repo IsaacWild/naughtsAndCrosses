@@ -57,7 +57,7 @@ const player = (() => {
         console.log('nought selected')
         }  
     })
-    
+    return{playerMarker}
 })();
 
 
