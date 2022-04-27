@@ -71,66 +71,82 @@ const checkWin = (gamePlay) => {
         console.log(playString)
     }
     if (playString.length == 9){
-        console.log('tie')
+        return console.log('tie')
     }else if (a && b && c == 'x'){
+        console.log(a,b,c)
         return console.log("X win's")
     } else if (a && b && c == 'o'){
+        console.log(a,b,c)
         return console.log("O win's")
     }else
     a = gamePlay[3]
     b = gamePlay[4]
     c = gamePlay[5]
     if (a && b && c == 'x'){
+        console.log(a,b,c)
         return console.log("X win's")
     } else if (a && b && c == 'o'){
+        console.log(a,b,c)
         return console.log("O win's")
     }else
     a = gamePlay[6]
     b = gamePlay[7]
     c = gamePlay[8]
     if (a && b && c == 'x'){
+        console.log(a,b,c)
         return console.log("X win's")
     } else if (a && b && c == 'o'){
+        console.log(a,b,c)
         return console.log("O win's")
     }else
     a = gamePlay[0]
     b = gamePlay[3]
     c = gamePlay[6]
     if (a && b && c == 'x'){
+        console.log(a,b,c)
         return console.log("X win's")
     } else if (a && b && c == 'o'){
+        console.log(a,b,c)
         return console.log("O win's")
     }else
     a = gamePlay[1]
     b = gamePlay[4]
     c = gamePlay[7]
     if (a && b && c == 'x'){
+        console.log(a,b,c)
         return console.log("X win's")
     } else if (a && b && c == 'o'){
+        console.log(a,b,c)
         return console.log("O win's")
     }else
     a = gamePlay[2]
     b = gamePlay[5]
     c = gamePlay[8]
     if (a && b && c == 'x'){
+        console.log(a,b,c)
         return console.log("X win's")
     } else if (a && b && c == 'o'){
+        console.log(a,b,c)
         return console.log("O win's")
     }else
     a = gamePlay[0]
     b = gamePlay[4]
     c = gamePlay[8]
     if (a && b && c == 'x'){
+        console.log(a,b,c)
         return console.log("X win's")
     } else if (a && b && c == 'o'){
+        console.log(a,b,c)
         return console.log("O win's")
     }else
     a = gamePlay[2]
     b = gamePlay[4]
     c = gamePlay[6]
     if (a && b && c == 'x'){
+        console.log(a,b,c)
         return console.log("X win's")
     } else if (a && b && c == 'o'){
+        console.log(a,b,c)
         return console.log("O win's")
     }  
 };
