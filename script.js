@@ -1,3 +1,23 @@
+//sets player marker
+const player = (() => {
+    const btnCross = document.querySelector('.btnCross');
+    const btnNought = document.querySelector('.btnNought');
+    btnCross.addEventListener('click', ()=> {
+        if(this.playerMarker == null){
+            this.playerMarker = 'x';
+            btnCross.classList.toggle('selectedMarker')
+        }
+    })
+    btnNought.addEventListener('click', ()=> {
+        if(this.playerMarker == null){
+        this.playerMarker = 'o';
+        btnNought.classList.toggle('selectedMarker')
+        }  
+    })
+    return {btnCross, btnNought}
+})();
+
+
 //Object factory for the gameboard logic?
 //This works!!
 const gameBoard = (() => {
@@ -22,8 +42,8 @@ const gameBoard = (() => {
                     markerImgBox.classList.add('cross', 'selectedBox');
                     checkWin(gamePlay);
                     playerMarker = 'o';
-                    player.btnCross.classList.toggle('selectedMarker')
-                    player.btnNought.classList.toggle('selectedMarker')
+                    btnCross.classList.toggle('selectedMarker')
+                    btnNought.classList.toggle('selectedMarker')
                     console.log('changed to: ' + playerMarker)
                 }else if (this.playerMarker == 'o'){
                     gamePlay.splice(i,1,'o');
@@ -47,23 +67,6 @@ const gameBoard = (() => {
     return{ gamePlay }
 })();
 
-//sets player marker
-const player = (() => {
-    const btnCross = document.querySelector('.btnCross');
-    const btnNought = document.querySelector('.btnNought');
-    btnCross.addEventListener('click', ()=> {
-        if(this.playerMarker == null){
-            this.playerMarker = 'x';
-            btnCross.classList.toggle('selectedMarker')
-        }
-    })
-    btnNought.addEventListener('click', ()=> {
-        if(this.playerMarker == null){
-        this.playerMarker = 'o';
-        btnNought.classList.toggle('selectedMarker')
-        }  
-    })
-})();
 
 
 
