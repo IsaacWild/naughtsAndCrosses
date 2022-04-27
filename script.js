@@ -7,6 +7,7 @@ const gameBoard = (() => {
     const btnCross = document.querySelector('.btnCross');
     const btnNought = document.querySelector('.btnNought');
     const gameGrid = document.querySelector('.gameWrapper');
+    
     let player1Name  = '';
     let player2Name = '';
 
@@ -14,28 +15,32 @@ const gameBoard = (() => {
         for (let i = 0; i < gamePlay.length; i++) {
             const gameBox = document.createElement('div')
             gameBox.classList.add('gameBox');
-            gameBox.setAttribute('id',`box${i}`);
+            gameBox.setAttribute('id',`${i}`);
             gameGrid.appendChild(gameBox);
             const markerImgBox = document.createElement('img')
             markerImgBox.classList.add('emptyBox')
             gameBox.appendChild(markerImgBox)
             gameBox.addEventListener('click', ()=>{
-                if(this.playerMarker == 'x'){
-                    gamePlay.splice(i,1,'x');
-                    markerImgBox.classList.add('cross', 'selectedBox');
-                    checkWin(gamePlay);
-                    this.playerMarker = 'o';
-                    btnCross.classList.toggle('selectedMarker')
-                    btnNought.classList.toggle('selectedMarker')
-                    console.log('changed to: ' + this.playerMarker)
-                }else if (this.playerMarker == 'o'){
-                    gamePlay.splice(i,1,'o');
-                    markerImgBox.classList.add('nought', 'selectedBox');
-                    checkWin(gamePlay);
-                    this.playerMarker = 'x';
-                    btnCross.classList.toggle('selectedMarker')
-                    btnNought.classList.toggle('selectedMarker')
-                    console.log('changed to: ' + this.playerMarker)
+                if(markerImgBox.classList[1] != 'selectedBox'){
+                    if(this.playerMarker == 'x'){
+                        gamePlay.splice(i,1,'x');
+                        markerImgBox.classList.add('cross', 'selectedBox');
+                        markerImgBox.classList.remove('emptyBox');
+                        checkWin(gamePlay);
+                        this.playerMarker = 'o';
+                        btnCross.classList.toggle('selectedMarker')
+                        btnNought.classList.toggle('selectedMarker')
+                        console.log('changed to: ' + this.playerMarker)
+                    }else if (this.playerMarker == 'o'){
+                        gamePlay.splice(i,1,'o');
+                        markerImgBox.classList.add('nought', 'selectedBox');
+                        markerImgBox.classList.remove('emptyBox');
+                        checkWin(gamePlay);
+                        this.playerMarker = 'x';
+                        btnCross.classList.toggle('selectedMarker')
+                        btnNought.classList.toggle('selectedMarker')
+                        console.log('changed to: ' + this.playerMarker)
+                    }
                 }
             })
             if(gamePlay[i] == 'x'){
@@ -53,9 +58,8 @@ const gameBoard = (() => {
 const player = (() => {
     const btnCross = document.querySelector('.btnCross');
     const btnNought = document.querySelector('.btnNought');
-    const btnStart = document.querySelector('.btnStartGame')
-    // const name1Box = document.querySelector('#player1Name')
-    // const name2Box = document.querySelector('#player2Name')
+    const btnStart = document.querySelector('.btnStartGame');
+    const markerMessage = document.querySelector('.markerMessage')
     btnCross.addEventListener('click', ()=> {
         if(this.playerMarker == null){
             this.playerMarker = 'x';
@@ -71,6 +75,7 @@ const player = (() => {
     btnStart.addEventListener('click', ()=> {
         this.player1Name = document.querySelector('#player1Name').value;
         this.player2Name = document.querySelector('#player2Name').value;
+        markerMessage.textContent = this.player1Name + ' Choose your marker';
         console.log(player1Name,player2Name);
     })
 })();
@@ -167,5 +172,5 @@ const checkWin = (gamePlay) => {
 };
 
 const showWin = () => {
-
+    
 }
