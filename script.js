@@ -22,13 +22,11 @@ const gameBoard = (() => {
                     markerImgBox.classList.add('cross', 'selectedBox');
                     checkWin(gamePlay);
                     playerMarker = 'o';
-                    this.player();
                 }else if (this.playerMarker == 'o'){
                     gamePlay.splice(i,1,'o');
                     markerImgBox.classList.add('nought', 'selectedBox');
                     checkWin(gamePlay);
                     playerMarker = 'x';
-                    this.player();
                 }
             })
             if(gamePlay[i] == 'x'){
@@ -61,8 +59,8 @@ const player = (() => {
         console.log('nought selected')
         }  
     })
-    return {player}
 })();
+
 
 
 const checkWin = (gamePlay) => {
