@@ -1,23 +1,3 @@
-//sets player marker
-const player = (() => {
-    const btnCross = document.querySelector('.btnCross');
-    const btnNought = document.querySelector('.btnNought');
-    btnCross.addEventListener('click', ()=> {
-        if(this.playerMarker == null){
-            this.playerMarker = 'x';
-            btnCross.classList.toggle('selectedMarker')
-        }
-    })
-    btnNought.addEventListener('click', ()=> {
-        if(this.playerMarker == null){
-        this.playerMarker = 'o';
-        btnNought.classList.toggle('selectedMarker')
-        }  
-    })
-    return {btnCross, btnNought}
-})();
-
-
 //Object factory for the gameboard logic?
 //This works!!
 const gameBoard = (() => {
@@ -67,8 +47,23 @@ const gameBoard = (() => {
     return{ gamePlay }
 })();
 
-
-
+//sets player marker
+const player = (() => {
+    const btnCross = document.querySelector('.btnCross');
+    const btnNought = document.querySelector('.btnNought');
+    btnCross.addEventListener('click', ()=> {
+        if(this.playerMarker == null){
+            this.playerMarker = 'x';
+            btnCross.classList.toggle('selectedMarker')
+        }
+    })
+    btnNought.addEventListener('click', ()=> {
+        if(this.playerMarker == null){
+        this.playerMarker = 'o';
+        btnNought.classList.toggle('selectedMarker')
+        }  
+    })
+})();
 
 const checkWin = (gamePlay) => {
     console.log('test')
