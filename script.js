@@ -22,13 +22,13 @@ const gameBoard = (() => {
                     markerImgBox.classList.add('cross', 'selectedBox');
                     checkWin(gamePlay);
                     playerMarker = 'o';
-                    player();
+                    this.player();
                 }else if (this.playerMarker == 'o'){
                     gamePlay.splice(i,1,'o');
                     markerImgBox.classList.add('nought', 'selectedBox');
                     checkWin(gamePlay);
                     playerMarker = 'x';
-                    player();
+                    this.player();
                 }
             })
             if(gamePlay[i] == 'x'){
