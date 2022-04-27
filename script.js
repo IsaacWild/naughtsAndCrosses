@@ -6,7 +6,9 @@ const gameBoard = (() => {
     let playerMarker = '';
     const btnCross = document.querySelector('.btnCross');
     const btnNought = document.querySelector('.btnNought');
-    const gameGrid = document.querySelector('.gameWrapper')
+    const gameGrid = document.querySelector('.gameWrapper');
+    let player1Name  = '';
+    let player2Name = '';
 
     const _render = () => {
         for (let i = 0; i < gamePlay.length; i++) {
@@ -51,6 +53,9 @@ const gameBoard = (() => {
 const player = (() => {
     const btnCross = document.querySelector('.btnCross');
     const btnNought = document.querySelector('.btnNought');
+    const btnStart = document.querySelector('.btnStartGame')
+    // const name1Box = document.querySelector('#player1Name')
+    // const name2Box = document.querySelector('#player2Name')
     btnCross.addEventListener('click', ()=> {
         if(this.playerMarker == null){
             this.playerMarker = 'x';
@@ -62,6 +67,11 @@ const player = (() => {
         this.playerMarker = 'o';
         btnNought.classList.toggle('selectedMarker')
         }  
+    })
+    btnStart.addEventListener('click', ()=> {
+        this.player1Name = document.querySelector('#player1Name').value;
+        this.player2Name = document.querySelector('#player2Name').value;
+        console.log(player1Name,player2Name);
     })
 })();
 
