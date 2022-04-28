@@ -65,7 +65,7 @@ const gameBoard = (() => {
         }
     }    
     _render();
-    return{ gamePlay}
+    return{ gamePlay }
 })();
 
 //sets player marker
@@ -111,9 +111,11 @@ const checkWin = (gamePlay) => {
     }
     if (a == 'x' && b == 'x' && c == 'x'){
         console.log(a,b,c)
+        playerXWin();
         return console.log("X win's")
     } else if (a == 'o' && b == 'o' && c == 'o'){
         console.log(a,b,c)
+        playerOWin();
         return console.log("O win's")
     }else
     a = gamePlay[3]
@@ -121,9 +123,11 @@ const checkWin = (gamePlay) => {
     c = gamePlay[5]
     if (a == 'x' && b == 'x' && c == 'x'){
         console.log(a,b,c)
+        playerXWin();
         return console.log("X win's")
     } else if (a == 'o' && b == 'o' && c == 'o'){
         console.log(a,b,c)
+        playerOWin();
         return console.log("O win's")
     }else
     a = gamePlay[6]
@@ -131,9 +135,11 @@ const checkWin = (gamePlay) => {
     c = gamePlay[8]
     if (a == 'x' && b == 'x' && c == 'x'){
         console.log(a,b,c)
+        playerXWin();
         return console.log("X win's")
     } else if (a == 'o' && b == 'o' && c == 'o'){
         console.log(a,b,c)
+        playerOWin();
         return console.log("O win's")
     }else
     a = gamePlay[0]
@@ -141,9 +147,11 @@ const checkWin = (gamePlay) => {
     c = gamePlay[6]
     if (a == 'x' && b == 'x' && c == 'x'){
         console.log(a,b,c)
+        playerXWin();
         return console.log("X win's")
     } else if (a == 'o' && b == 'o' && c == 'o'){
         console.log(a,b,c)
+        playerOWin();
         return console.log("O win's")
     }else
     a = gamePlay[1]
@@ -151,9 +159,11 @@ const checkWin = (gamePlay) => {
     c = gamePlay[7]
     if (a == 'x' && b == 'x' && c == 'x'){
         console.log(a,b,c)
+        playerXWin();
         return console.log("X win's")
     } else if (a == 'o' && b == 'o' && c == 'o'){
         console.log(a,b,c)
+        playerOWin();
         return console.log("O win's")
     }else
     a = gamePlay[2]
@@ -161,9 +171,11 @@ const checkWin = (gamePlay) => {
     c = gamePlay[8]
     if (a == 'x' && b == 'x' && c == 'x'){
         console.log(a,b,c)
+        playerXWin();
         return console.log("X win's")
     } else if (a == 'o' && b == 'o' && c == 'o'){
         console.log(a,b,c)
+        playerOWin();
         return console.log("O win's")
     }else
     a = gamePlay[0]
@@ -171,9 +183,11 @@ const checkWin = (gamePlay) => {
     c = gamePlay[8]
     if (a == 'x' && b == 'x' && c == 'x'){
         console.log(a,b,c)
+        playerXWin();
         return console.log("X win's")
     } else if (a == 'o' && b == 'o' && c == 'o'){
         console.log(a,b,c)
+        playerOWin();
         return console.log("O win's")
     }else
     a = gamePlay[2]
@@ -181,12 +195,30 @@ const checkWin = (gamePlay) => {
     c = gamePlay[6]
     if (a == 'x' && b == 'x' && c == 'x'){
         console.log(a,b,c)
+        playerXWin();
         return console.log("X win's")
     } else if (a == 'o' && b == 'o' && c === 'o'){
         console.log(a,b,c)
+        playerOWin();
         return console.log("O win's")
     }else if (playString.length == 9){
         return console.log('tie')
+    }
+
+    playerXWin = () => {
+        if (gameBoard.player1Marker == 'x'){
+            alert('Well done ' + gameBoard.player1Name + ' you win!!')
+        }else{
+            alert('Well done ' + gameBoard.player2Name + ' you win!!')
+        }
+    }
+
+    playerOWin = () => {
+        if (gameBoard.player1Marker == 'o'){
+            alert('Well done ' + gameBoard.player1Name + ' you win!!')
+        }else{
+            alert('Well done ' + gameBoard.player2Name + ' you win!!')
+        }
     }
 };
 
