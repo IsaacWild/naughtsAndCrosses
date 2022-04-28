@@ -70,6 +70,21 @@ const gameBoard = (() => {
         }
     }    
     _render();
+
+    const btnReset = document.querySelector('.re-set')
+    btnReset.addEventListener('click', ()=>{
+        this.playerMarker = ''
+        this.player1Marker = ''
+        this.player1Marker = ''
+        this.player1Name = ''
+        this.player2Name = ''
+        while(gameGrid.firstChild){
+            gameGrid.removeChild(gameGrid.lastChild);
+        }
+        gamePlay = ['','','','','','','','',''];
+        this._render();
+    })
+
     return{ gamePlay, player1Name, player2Name, player1Marker }
 })();
 
@@ -234,7 +249,3 @@ const checkWin = (gamePlay, player1Name, player2Name, player1Marker) => {
         }
     }
 };
-
-const showWin = () => {
-    
-}
