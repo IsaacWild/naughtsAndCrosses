@@ -7,9 +7,12 @@ const gameBoard = (() => {
     const btnCross = document.querySelector('.btnCross');
     const btnNought = document.querySelector('.btnNought');
     const gameGrid = document.querySelector('.gameWrapper');
+    const markerMessage = document.querySelector('.markerMessage')
     
     let player1Name  = '';
     let player2Name = '';
+    let player1Marker = '';
+    let player2Marker = '';
 
     const _render = () => {
         for (let i = 0; i < gamePlay.length; i++) {
@@ -31,6 +34,12 @@ const gameBoard = (() => {
                         btnCross.classList.toggle('selectedMarker')
                         btnNought.classList.toggle('selectedMarker')
                         console.log('changed to: ' + this.playerMarker)
+                        if (player1Marker == 'x'){
+                            markerMessage.textContent = player2Name + 'take your turn'
+                        } else {
+                            markerMessage.textContent = player1Name + 'take your turn'
+                        }
+                        
                     }else if (this.playerMarker == 'o'){
                         gamePlay.splice(i,1,'o');
                         markerImgBox.classList.add('nought', 'selectedBox');
@@ -40,6 +49,11 @@ const gameBoard = (() => {
                         btnCross.classList.toggle('selectedMarker')
                         btnNought.classList.toggle('selectedMarker')
                         console.log('changed to: ' + this.playerMarker)
+                        if (player1Marker == 'o'){
+                            markerMessage.textContent = player2Name + 'take your turn'
+                        } else {
+                            markerMessage.textContent = player1Name + 'take your turn'
+                        }
                     }
                 }
             })
@@ -64,19 +78,24 @@ const player = (() => {
         if(this.playerMarker == null){
             this.playerMarker = 'x';
             btnCross.classList.toggle('selectedMarker')
+            player1Marker = 'x'
+            player2Marker = 'o'
+            markerMessage.textContent = player1Name + ' take your turn'
         }
     })
     btnNought.addEventListener('click', ()=> {
         if(this.playerMarker == null){
-        this.playerMarker = 'o';
-        btnNought.classList.toggle('selectedMarker')
+            this.playerMarker = 'o';
+            btnNought.classList.toggle('selectedMarker')
+            player1Marker = 'o'
+            player2Marker = 'x'
+            markerMessage.textContent = player1Name + ' take your turn'
         }  
     })
     btnStart.addEventListener('click', ()=> {
         this.player1Name = document.querySelector('#player1Name').value;
         this.player2Name = document.querySelector('#player2Name').value;
         markerMessage.textContent = this.player1Name + ' Choose your marker';
-        console.log(player1Name,player2Name);
     })
 })();
 

@@ -102,6 +102,8 @@ body{
 
 .selectedBox{
     z-index: 5;
+    border: 3px hsla(0, 0%, 0%, 0.158);
+    box-shadow: 0px, 0px, 2px, 3px, rgba(255, 112, 51, 0.7);
 }
 
 .cross{
