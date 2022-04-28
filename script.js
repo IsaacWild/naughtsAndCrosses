@@ -35,9 +35,9 @@ const gameBoard = (() => {
                         btnNought.classList.toggle('selectedMarker')
                         console.log('changed to: ' + this.playerMarker)
                         if (player1Marker == 'x'){
-                            markerMessage.textContent = player2Name + 'take your turn'
+                            markerMessage.textContent = this.player2Name + 'take your turn'
                         } else {
-                            markerMessage.textContent = player1Name + 'take your turn'
+                            markerMessage.textContent = this.player1Name + 'take your turn'
                         }
                         
                     }else if (this.playerMarker == 'o'){
@@ -50,9 +50,9 @@ const gameBoard = (() => {
                         btnNought.classList.toggle('selectedMarker')
                         console.log('changed to: ' + this.playerMarker)
                         if (player1Marker == 'o'){
-                            markerMessage.textContent = player2Name + 'take your turn'
+                            markerMessage.textContent = this.player2Name + 'take your turn'
                         } else {
-                            markerMessage.textContent = player1Name + 'take your turn'
+                            markerMessage.textContent = this.player1Name + 'take your turn'
                         }
                     }
                 }
