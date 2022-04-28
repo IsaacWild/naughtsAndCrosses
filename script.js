@@ -34,10 +34,10 @@ const gameBoard = (() => {
                         btnCross.classList.toggle('selectedMarker')
                         btnNought.classList.toggle('selectedMarker')
                         console.log('changed to: ' + this.playerMarker)
-                        if (player1Marker == 'x'){
-                            this.markerMessage.textContent = this.player2Name + 'take your turn'
+                        if (player1Marker == playerMarker){
+                            markerMessage.textContent = this.player1Name + 'take your turn'
                         } else {
-                            this.markerMessage.textContent = this.player1Name + 'take your turn'
+                            markerMessage.textContent = this.player2Name + 'take your turn'
                         }
                         
                     }else if (this.playerMarker == 'o'){
@@ -49,10 +49,10 @@ const gameBoard = (() => {
                         btnCross.classList.toggle('selectedMarker')
                         btnNought.classList.toggle('selectedMarker')
                         console.log('changed to: ' + this.playerMarker)
-                        if (player1Marker == 'o'){
-                            this.markerMessage.textContent = this.player2Name + 'take your turn'
+                        if (player1Marker == playerMarker){
+                            markerMessage.textContent = this.player1Name + 'take your turn'
                         } else {
-                            this.markerMessage.textContent = this.player1Name + 'take your turn'
+                            markerMessage.textContent = this.player2Name + 'take your turn'
                         }
                     }
                 }
