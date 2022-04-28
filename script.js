@@ -83,7 +83,7 @@ const gameBoard = (() => {
             gameGrid.removeChild(gameGrid.lastChild);
         }
         gamePlay = ['','','','','','','','',''];
-        this._render();
+        _render();
     })
 
     return{ gamePlay, player1Name, player2Name, player1Marker }
