@@ -129,9 +129,9 @@ const checkWin = (gamePlay, player1Name, player2Name, player1Marker) => {
     let b = gamePlay[1]
     let c = gamePlay[2]
     let playString = '';
-    let player1Name  = player1Name;
-    let player2Name = player1Name;
-    let player1Marker = player1Name;
+    let name1  = player1Name;
+    let name2 = player1Name;
+    let marker1 = player1Name;
 
     for (var i = 0; i < gamePlay.length; i++) {
         playString = playString + gamePlay[i]
@@ -234,18 +234,18 @@ const checkWin = (gamePlay, player1Name, player2Name, player1Marker) => {
     }
 
     playerXWin = () => {
-        if (player1Marker == 'x'){
-            alert('Well done ' + player1Name + ' you win!!')
+        if (marker1 == 'x'){
+            alert('Well done ' + name1 + ' you win!!')
         }else{
-            alert('Well done ' + player2Name + ' you win!!')
+            alert('Well done ' + name2 + ' you win!!')
         }
     }
 
     playerOWin = () => {
-        if (player1Marker == 'o'){
-            alert('Well done ' + player1Name + ' you win!!')
+        if (marker1 == 'o'){
+            alert('Well done ' + name1 + ' you win!!')
         }else{
-            alert('Well done ' + player2Name + ' you win!!')
+            alert('Well done ' + name2 + ' you win!!')
         }
     }
 };
