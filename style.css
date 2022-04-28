@@ -190,3 +190,7 @@ body{
                 opacity 500ms ease-in-out,
                 height 0ms ease-in-out 500ms; */
 }
+
+.disabled {
+    pointer-events: none;
+}
