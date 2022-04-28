@@ -83,6 +83,11 @@ const gameBoard = (() => {
             gameGrid.removeChild(gameGrid.lastChild);
         }
         gamePlay = ['','','','','','','','',''];
+        markerMessage.textContent = ''
+        btnCross.classList.remove('disabled')
+        btnNought.classList.remove('disabled')
+        btnCross.classList.remove('selectedMarker')
+        btnNought.classList.remove('selectedMarker')
         _render();
     })
 
