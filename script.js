@@ -114,10 +114,9 @@ const checkWin = (gamePlay, player1Name, player2Name, player1Marker) => {
     let b = gamePlay[1]
     let c = gamePlay[2]
     let playString = '';
-    // let player1Name  = player1Name;
-    // let player2Name = player1Name;
-    // let player1Marker = player1Name;
-    // let player2Marker = player1Name;
+    let player1Name  = player1Name;
+    let player2Name = player1Name;
+    let player1Marker = player1Name;
 
     for (var i = 0; i < gamePlay.length; i++) {
         playString = playString + gamePlay[i]
