@@ -30,12 +30,12 @@ const gameBoard = (() => {
                         markerImgBox.classList.add('cross', 'selectedBox');
                         markerImgBox.classList.remove('emptyBox');
                         checkWin(gamePlay);
-                        if (player1Marker == 'x'){
-                            console.log('player 1 markler: ' + player1Marker + 'Current marker: ' + playerMarker)
-                            markerMessage.textContent = this.player2Name + 'take your turn'
+                        if (this.player1Marker == 'x'){
+                            console.log('player 1 marker: ' + this.player1Marker + 'Current marker: ' + this.playerMarker)
+                            markerMessage.textContent = this.player2Name + ' take your turn'
                         } else {
-                            console.log('player 1 markler: ' + player1Marker + 'Current marker: ' + playerMarker)
-                            markerMessage.textContent = this.player1Name + 'take your turn'
+                            console.log('player 1 marker: ' + this.player1Marker + 'Current marker: ' + this.playerMarker)
+                            markerMessage.textContent = this.player1Name + ' take your turn'
                         }
                         this.playerMarker = 'o';
                         btnCross.classList.toggle('selectedMarker')
@@ -47,12 +47,12 @@ const gameBoard = (() => {
                         markerImgBox.classList.add('nought', 'selectedBox');
                         markerImgBox.classList.remove('emptyBox');
                         checkWin(gamePlay);
-                        if (player1Marker == 'o'){
-                            console.log('player 1 markler: ' + player1Marker + 'Current marker: ' + playerMarker)
-                            markerMessage.textContent = this.player2Name + 'take your turn'
+                        if (this.player1Marker == 'o'){
+                            console.log('player 1 marker: ' + this.player1Marker + 'Current marker: ' + this.playerMarker)
+                            markerMessage.textContent = this.player2Name + ' take your turn'
                         } else {
-                            console.log('player 1 markler: ' + player1Marker + 'Current marker: ' + playerMarker)
-                            markerMessage.textContent = this.player1Name + 'take your turn'
+                            console.log('player 1 marker: ' + this.player1Marker + 'Current marker: ' + this.playerMarker)
+                            markerMessage.textContent = this.player1Name + ' take your turn'
                         }
                         this.playerMarker = 'x';
                         btnCross.classList.toggle('selectedMarker')
