@@ -73,6 +73,7 @@ const gameBoard = (() => {
 
     const btnReset = document.querySelector('.re-set')
     btnReset.addEventListener('click', ()=>{
+        console.log('re-set!!')
         this.playerMarker = ''
         this.player1Marker = ''
         this.player1Marker = ''
