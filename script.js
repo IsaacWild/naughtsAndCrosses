@@ -29,7 +29,7 @@ const gameBoard = (() => {
                         gamePlay.splice(i,1,'x');
                         markerImgBox.classList.add('cross', 'selectedBox');
                         markerImgBox.classList.remove('emptyBox');
-                        checkWin(gamePlay);
+                        checkWin(gamePlay,player1Name, player2Name, player1Marker);
                         if (this.player1Marker == 'x'){
                             console.log('player 1 marker: ' + this.player1Marker + 'Current marker: ' + this.playerMarker)
                             markerMessage.textContent = this.player2Name + ' take your turn'
@@ -46,7 +46,7 @@ const gameBoard = (() => {
                         gamePlay.splice(i,1,'o');
                         markerImgBox.classList.add('nought', 'selectedBox');
                         markerImgBox.classList.remove('emptyBox');
-                        checkWin(gamePlay);
+                        checkWin(gamePlay, player1Name, player2Name, player1Marker);
                         if (this.player1Marker == 'o'){
                             console.log('player 1 marker: ' + this.player1Marker + 'Current marker: ' + this.playerMarker)
                             markerMessage.textContent = this.player2Name + ' take your turn'
@@ -70,7 +70,7 @@ const gameBoard = (() => {
         }
     }    
     _render();
-    return{ gamePlay, player1Name, player2Name }
+    return{ gamePlay, player1Name, player2Name, player1Marker }
 })();
 
 //sets player marker
@@ -108,12 +108,17 @@ const player = (() => {
     })
 })();
 
-const checkWin = (gamePlay) => {
+const checkWin = (gamePlay, player1Name, player2Name, player1Marker) => {
     console.log('test')
     let a = gamePlay[0]
     let b = gamePlay[1]
     let c = gamePlay[2]
     let playString = '';
+    // let player1Name  = player1Name;
+    // let player2Name = player1Name;
+    // let player1Marker = player1Name;
+    // let player2Marker = player1Name;
+
     for (var i = 0; i < gamePlay.length; i++) {
         playString = playString + gamePlay[i]
         console.log(playString)
@@ -215,18 +220,18 @@ const checkWin = (gamePlay) => {
     }
 
     playerXWin = () => {
-        if (gameBoard.player1Marker == 'x'){
-            alert('Well done ' + gameBoard.player1Name + ' you win!!')
+        if (player1Marker == 'x'){
+            alert('Well done ' + player1Name + ' you win!!')
         }else{
-            alert('Well done ' + gameBoard.player2Name + ' you win!!')
+            alert('Well done ' + player2Name + ' you win!!')
         }
     }
 
     playerOWin = () => {
-        if (gameBoard.player1Marker == 'o'){
-            alert('Well done ' + gameBoard.player1Name + ' you win!!')
+        if (player1Marker == 'o'){
+            alert('Well done ' + player1Name + ' you win!!')
         }else{
-            alert('Well done ' + gameBoard.player2Name + ' you win!!')
+            alert('Well done ' + player2Name + ' you win!!')
         }
     }
 };
