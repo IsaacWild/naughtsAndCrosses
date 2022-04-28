@@ -89,9 +89,14 @@ const gameBoard = (() => {
         btnCross.classList.remove('selectedMarker')
         btnNought.classList.remove('selectedMarker')
         _render();
+        console.log('player marker: ' + playerMarker)
+        console.log('player 1 marker: ' + player1Marker)
+        console.log('player 2 marker: ' + player2Marker)
+        console.log('player 1 name: ' + player1Name)
+        console.log('player 2 name: ' + player2Name)
     })
 
-    return{ gamePlay, player1Name, player2Name, player1Marker }
+    return{ gamePlay, player1Name, player2Name, player1Marker, markerMessage}
 })();
 
 //sets player marker
@@ -101,7 +106,7 @@ const player = (() => {
     const btnStart = document.querySelector('.btnStartGame');
     const markerMessage = document.querySelector('.markerMessage')
     btnCross.addEventListener('click', ()=> {
-        if(this.playerMarker == null){
+        if(this.playerMarker == ''){
             this.playerMarker = 'x';
             btnCross.classList.toggle('selectedMarker')
             player1Marker = 'x'
@@ -112,7 +117,7 @@ const player = (() => {
         }
     })
     btnNought.addEventListener('click', ()=> {
-        if(this.playerMarker == null){
+        if(this.playerMarker == ''){
             this.playerMarker = 'o';
             btnNought.classList.toggle('selectedMarker')
             player1Marker = 'o'
@@ -130,14 +135,11 @@ const player = (() => {
 })();
 
 const checkWin = (gamePlay, player1Name, player2Name, player1Marker) => {
-    console.log('test')
     let a = gamePlay[0]
     let b = gamePlay[1]
     let c = gamePlay[2]
     let playString = '';
-    let name1  = player1Name;
-    let name2 = player1Name;
-    let marker1 = player1Name;
+    const markerMessage = document.querySelector('.markerMessage')
 
     for (var i = 0; i < gamePlay.length; i++) {
         playString = playString + gamePlay[i]
@@ -240,18 +242,22 @@ const checkWin = (gamePlay, player1Name, player2Name, player1Marker) => {
     }
 
     playerXWin = () => {
-        if (marker1 == 'x'){
-            alert('Well done ' + name1 + ' you win!!')
+        if (this.player1Marker == 'x'){
+            markerMessage.textContent = 'test'
+            alert('Well done ' + this.player1Name + ' you win!!')
         }else{
-            alert('Well done ' + name2 + ' you win!!')
+            markerMessage.textContent = 'test'
+            alert('Well done ' + this.player2Name + ' you win!!')
         }
     }
 
     playerOWin = () => {
-        if (marker1 == 'o'){
-            alert('Well done ' + name1 + ' you win!!')
+        if (this.player1Marker == 'o'){
+            markerMessage.textContent = 'test'
+            alert('Well done ' + this.player1Name + ' you win!!')
         }else{
-            alert('Well done ' + name2 + ' you win!!')
+            markerMessage.textContent = 'test'
+            alert('Well done ' + this.player2Name + ' you win!!')
         }
     }
 };
