@@ -72,7 +72,10 @@ const gameBoard = (() => {
     _render();
 
     const btnReset = document.querySelector('.re-set')
-    btnReset.addEventListener('click', ()=>{
+    btnReset.addEventListener('click', playagain())
+
+    //this may need to be outside the IIFE
+    function playagain () {
         console.log('re-set!!')
         this.playerMarker = ''
         this.player1Marker = ''
@@ -94,7 +97,7 @@ const gameBoard = (() => {
         console.log('player 2 marker: ' + player2Marker)
         console.log('player 1 name: ' + player1Name)
         console.log('player 2 name: ' + player2Name)
-    })
+    }        
 
     return{ gamePlay, player1Name, player2Name, player1Marker, markerMessage}
 })();
