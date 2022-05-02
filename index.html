@@ -13,41 +13,28 @@
 </head>
 <body>
     <div class="pageWrapper">
-        <div class="headerWrapper">
-            <div class="logo">
-                <img src="img/tic-tac-toe-logo.svg" alt="A game board of tic-tac-toe being played">
-            </div>
+        <div class="headder">
             <div class="title">
-                <p>Noughts & Crosses</p>
+                <h1>Tic-Tac-Toe</h1>
             </div>
         </div>
-        <div class="markerChoice">
-            <p class="markerMessage"></p>
-            <button class="btnCross markerButton"><img src="img/cross.svg" alt="A cross marker"></button>
-            <button class="btnNought markerButton"><img src="img/nought.svg" alt="A circle marker"></button>
+        <div class="playerInfo">
+            <p class="markerMessage">
+                Enter your names
+            </p>
+            <ul>
+                <li><span>X: </span><input type="text" name="playerXName" id="playerXName" placeholder="Player X name"></li>
+            </ul>
+            <ul>
+                <li><span>O: </span><input type="text" name="playerOName" id="playerOName" placeholder="Player O name"></li>
+            </ul>
+            <button class="btnPlay">PlayGame</button>
         </div>
         <div class="gameWrapper">
+            game grid goes here
         </div>
         <div class="footer">
-            <p>Image by <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=150614">OpenClipart-Vectors</a> & <a href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=27169">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=150614">Pixabay</a></p>
-        </div>
-        <div class="overlayName">
-            <fieldset>
-                <header>Lets get to know you!</header>
-                <p>
-                    <label for="player1Name">Player 1</label>
-                    <input type="text" name="player1Name" id="player1Name" placeholder="Real or fake names only">
-                </p>
-                <p>
-                    <label for="player2Name">Player 2</label>
-                <input type="text" name="player2Name" id="player2Name" placeholder="Real or fake names only">
-                </p>
-                <button class="btnStartGame">Start Game!</button>
-                <p>
-                    <button class="re-set">Play Again!</button>
-                </p>
-            </fieldset>
-            
+            Thanks for the pics
         </div>
     </div>
 </body>
