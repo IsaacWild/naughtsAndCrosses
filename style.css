@@ -9,6 +9,7 @@ body{
     text-align: center;
 }
 
+
 .pageWrapper{
     display: grid;
     align-items: center;
@@ -24,7 +25,9 @@ body{
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-
+    max-width: 75vw;
+    justify-self: center;
+    width: 80%;
 }
 
 ul{

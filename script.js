@@ -2,9 +2,9 @@ let gamePlay = ['x','o','o','x','x','o','o','','x'];
 let currentPlayer = '';
 let player1Name = '';
 let player2Name = '';
+const gameGrid = document.querySelector('.gridWrapper');
 
 function render () {
-    const gameGrid = document.querySelector('.gridWrapper');
     for (let i = 0; i < gamePlay.length; i++) {
         const gridBox = document.createElement('div')
             gridBox.classList.add('gridBox');
@@ -14,3 +14,11 @@ function render () {
 }
 
 render()
+
+function clear() {
+    gamePlay = ['','','','','','','','','']
+    while(gameGrid.firstChild){
+        gameGrid.removeChild(gameGrid.lastChild);
+    }
+    render()
+}
