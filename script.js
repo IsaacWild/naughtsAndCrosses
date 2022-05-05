@@ -20,13 +20,13 @@ function render () {
             gridBox.addEventListener('click', () => {
                 if (currentPlayer == 'x'){
                     gamePlay.splice(i,1,'x');
-                    gridBox.textContent = 'x'
+                    gridBox.classList.add('cross');
                     currentPlayer = 'o'
                     gameMessage.textContent = `${playerOName} it's your turn! Place your O`
                     checkWin()
                 }else if (currentPlayer == 'o'){
                     gamePlay.splice(i,1,'o');
-                    gridBox.textContent = 'o'
+                    gridBox.classList.add('nought');
                     currentPlayer = 'x'
                     gameMessage.textContent = `${playerXName} it's your turn! Place your X`
                     checkWin()

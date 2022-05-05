@@ -87,3 +87,19 @@ ul{
 .disabled {
     pointer-events: none;
 }
+
+.cross{
+    background-image:url('img/cross.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: inset 0 0 1.5em 0.1em  hsla(27, 87%, 75%, 0.7);
+}
+
+.nought{
+    background-image:url('img/nought.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: inset 0 0 1.5em 0.1em  hsla(27, 87%, 55%, 0.7);
+}
