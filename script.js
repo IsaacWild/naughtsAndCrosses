@@ -11,7 +11,10 @@ const btnPlayGame = document.querySelector('.btnPlay')
 function render () {
     for (let i = 0; i < gamePlay.length; i++) {
         const gridBox = document.createElement('div')
-            gridBox.classList.add('gridBox', 'disabled');
+            gridBox.classList.add('gridBox');
+            if((playerXName && playerOName) == ''){
+            gridBox.classList.add('disabled');
+            }
             gridBox.textContent = gamePlay[i]
             gameGrid.appendChild(gridBox);
             gridBox.addEventListener('click', () => {
