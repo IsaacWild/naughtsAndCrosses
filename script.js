@@ -52,6 +52,11 @@ function gameStart(){
         playerOName = document.querySelector('#playerOName').value;
         if(gameWon == true){
             clear()
+            if(currentPlayer == 'x'){
+                gameMessage.textContent = `X's go first! ${playerXName} Your turn!` 
+            }else{
+                gameMessage.textContent = `O's go first! ${playerOName} Your turn!` 
+            }
         }else{
             if((playerXName == '') || (playerOName == '')){
                 gameMessage.textContent = 'Please enter 2 names before you play'
@@ -82,68 +87,69 @@ function checkWin(){
     let a = gamePlay[0]
     let b = gamePlay[1]
     let c = gamePlay[2]
+
     if (a == 'x' && b == 'x' && c == 'x'){
-        playerXWin();
+        return playerXWin();
     } else if (a == 'o' && b == 'o' && c == 'o'){
-        playerOWin();
+        return playerOWin();
     }else
     a = gamePlay[3]
     b = gamePlay[4]
     c = gamePlay[5]
     if (a == 'x' && b == 'x' && c == 'x'){
-        playerXWin();
+        return playerXWin();
     } else if (a == 'o' && b == 'o' && c == 'o'){
-        playerOWin();
+        return playerOWin();
     }else
     a = gamePlay[6]
     b = gamePlay[7]
     c = gamePlay[8]
     if (a == 'x' && b == 'x' && c == 'x'){
-        playerXWin();
+        return playerXWin();
     } else if (a == 'o' && b == 'o' && c == 'o'){
-        playerOWin();
+        return playerOWin();
     }else
     a = gamePlay[0]
     b = gamePlay[3]
     c = gamePlay[6]
     if (a == 'x' && b == 'x' && c == 'x'){
-        playerXWin();
+        return playerXWin();
     } else if (a == 'o' && b == 'o' && c == 'o'){
-        playerOWin();
+        return playerOWin();
     }else
     a = gamePlay[1]
     b = gamePlay[4]
     c = gamePlay[7]
     if (a == 'x' && b == 'x' && c == 'x'){
-        playerXWin();
+        return playerXWin();
     } else if (a == 'o' && b == 'o' && c == 'o'){
-        playerOWin();
+        return playerOWin();
     }else
     a = gamePlay[2]
     b = gamePlay[5]
     c = gamePlay[8]
     if (a == 'x' && b == 'x' && c == 'x'){
-        playerXWin();
+        return playerXWin();
     } else if (a == 'o' && b == 'o' && c == 'o'){
-        playerOWin();
+        return playerOWin();
     }else
     a = gamePlay[0]
     b = gamePlay[4]
     c = gamePlay[8]
     if (a == 'x' && b == 'x' && c == 'x'){
-        playerXWin();
+        return playerXWin();
     } else if (a == 'o' && b == 'o' && c == 'o'){
-        playerOWin();
+        return playerOWin();
     }else
     a = gamePlay[2]
     b = gamePlay[4]
     c = gamePlay[6]
     if (a == 'x' && b == 'x' && c == 'x'){
-        playerXWin();
+        return playerXWin();
     } else if (a == 'o' && b == 'o' && c === 'o'){
-        playerOWin();
-    }else if (!gamePlay.includes('')){
-        tie()
+        return playerOWin();
+    } else if (!gamePlay.includes('')){
+        return tie()
     }
 
     playerXWin = () => {
@@ -158,7 +164,6 @@ function checkWin(){
     playerOWin = () => {
         gameMessage.textContent = `Well done ${playerOName} you won!!`
         gameWon = true
-        gameWon = true
         allGridBoxes.forEach(gridBox => {
             gridBox.classList.add('disabled')
         });
@@ -167,7 +172,6 @@ function checkWin(){
 
     tie = () => {
         gameMessage.textContent = `It's a tie!!`
-        gameWon = true
         gameWon = true
         allGridBoxes.forEach(gridBox => {
             gridBox.classList.add('disabled')
