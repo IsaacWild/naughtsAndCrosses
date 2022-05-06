@@ -1,7 +1,9 @@
 let gamePlay = ['','','','','','','','',''];
 let currentPlayer = '';
 let playerXName = '';
+let playerXWins = 0
 let playerOName = '';
+let playerOWins = 0
 let gameWon = false;
 let gameMessage = document.querySelector('.gameMessage')
 const gameGrid = document.querySelector('.gridWrapper');
@@ -10,6 +12,8 @@ const btnPlayGame = document.querySelector('.btnPlay')
 
 function render () {
     for (let i = 0; i < gamePlay.length; i++) {
+        const XWinsTag = document.querySelector('.XWinsTag')
+        const OWinsTag = document.querySelector('.OWinsTag')
         const gridBox = document.createElement('div')
             gridBox.classList.add('gridBox');
             if((playerXName && playerOName) == ''){
@@ -33,6 +37,8 @@ function render () {
                 }
             }, {once : true});
     }
+    XWinsTag.textContent = `Wins: ${playerXWins}`
+    OWinsTag.textContent = `Wins: ${playerOWins}`
 }
 
 function clear() {
@@ -159,6 +165,7 @@ function checkWin(){
             gridBox.classList.add('disabled')
         });
         btnPlayGame.classList.toggle('disabled')
+        playerXWins++
     }
 
     playerOWin = () => {
@@ -168,6 +175,7 @@ function checkWin(){
             gridBox.classList.add('disabled')
         });
         btnPlayGame.classList.toggle('disabled')
+        playerOWins++
     }
 
     tie = () => {
@@ -179,7 +187,6 @@ function checkWin(){
         btnPlayGame.classList.toggle('disabled')
     }
 }
-
 
 render()
 gameStart()
