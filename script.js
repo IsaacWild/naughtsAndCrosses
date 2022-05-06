@@ -11,9 +11,9 @@ const btnPlayGame = document.querySelector('.btnPlay')
 
 
 function render () {
+    const XWinsTag = document.querySelector('.XWinsTag')
+    const OWinsTag = document.querySelector('.OWinsTag')
     for (let i = 0; i < gamePlay.length; i++) {
-        const XWinsTag = document.querySelector('.XWinsTag')
-        const OWinsTag = document.querySelector('.OWinsTag')
         const gridBox = document.createElement('div')
             gridBox.classList.add('gridBox');
             if((playerXName && playerOName) == ''){
