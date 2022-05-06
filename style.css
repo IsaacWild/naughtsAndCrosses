@@ -82,6 +82,7 @@ ul{
 
 .gridBox{
     background-color: hsl(27, 87%, 64%);
+    transition: 0.3s;
 }
 
 .gridBox:hover{
