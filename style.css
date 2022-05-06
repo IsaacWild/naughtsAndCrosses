@@ -28,12 +28,17 @@ body{
 
 .playerInfo{
     display: grid;
-    justify-content: center;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 75vw;
     justify-self: center;
+    text-align: center;
+    max-width: 75vw;
     width: 80%;
+}
+
+.playerInfo input{
+    font-size: 1rem;
+    padding: 0.3rem;
 }
 
 ul{
@@ -60,6 +65,7 @@ ul{
     font-size: 1rem;
     font-weight: 600;
     transition: 0.2s;
+    grid-column: 1/-1;
 }
 
 .btnPlay:hover{
