@@ -7,7 +7,6 @@ body{
     text-align: center;
 }
 
-
 .pageWrapper{
     display: grid;
     align-items: center;
@@ -15,7 +14,16 @@ body{
     grid-template-rows: auto auto 1fr auto; 
     grid-template-columns: 100%;
     min-height: 100%;
+    
+}
 
+.title{
+}
+
+.title:hover{
+    transition: 0.5s;
+    transform: translate(4px, -4px);
+    transform: rotate(-4deg);
 }
 
 .playerInfo{
@@ -43,11 +51,36 @@ ul{
 .btnPlay{
     margin: 2rem;
     cursor: pointer;
+    width: 50%;
+    border: none;
+    padding: 0.5em;
+    background-color: hsl(18, 100%, 60%);
+    border-radius: 8px;
+    justify-self: center;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btnPlay:hover{
+    background-color: hsl(18, 100%, 60%);
+    box-shadow: -4px 4px 3px hsl(18, 100%, 35%);
+    transform: translate(4px, -4px);
+}
+
+.btnPlay:active{
+    background-color: hsl(37, 100%, 60%);
+    box-shadow: -4px 4px 3px hsl(10, 91%, 56%);
+    transform: translate(2px, -2px);
 }
 
 .gridBox{
-    
     background-color: hsl(27, 87%, 64%);
+}
+
+.gridBox:hover{
+    transform: translate(2px, -2px);
+    box-shadow: inset 0px 0px 3px hsl(10, 91%, 56%);
 }
 
 .gameWrapper{
