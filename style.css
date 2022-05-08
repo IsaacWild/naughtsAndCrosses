@@ -14,10 +14,7 @@ body{
     grid-template-rows: auto auto 1fr auto; 
     grid-template-columns: 100%;
     min-height: 100%;
-    
-}
-
-.title{
+    max-width: 100vw;
 }
 
 .title:hover{
@@ -29,16 +26,16 @@ body{
 .playerInfo{
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(2, 1fr);
     justify-self: center;
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
-    max-width: 75vw;
-    width: 80%;
 }
 
 .playerInfo input{
     font-size: 1rem;
     padding: 0.3rem;
+    width: 35vw;
+    max-width: 400px;
 }
 
 ul{
@@ -58,14 +55,15 @@ ul{
     cursor: pointer;
     width: 50%;
     border: none;
-    padding: 0.5em;
+    padding: 1em;
     background-color: hsl(18, 100%, 60%);
     border-radius: 8px;
     justify-self: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     transition: 0.2s;
     grid-column: 1/-1;
+    max-width: 500px;
 }
 
 .btnPlay:hover{
