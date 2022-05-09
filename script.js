@@ -167,6 +167,7 @@ const game = (() => {
             playerXWins++
             XWinsTag.textContent = `Wins: ${playerXWins}`
             OWinsTag.textContent = `Wins: ${playerOWins}`
+            btnPlayGame.textContent = 'Play Again?'
         }
     
         playerOWin = () => {
@@ -179,6 +180,7 @@ const game = (() => {
             playerOWins++
             XWinsTag.textContent = `Wins: ${playerXWins}`
             OWinsTag.textContent = `Wins: ${playerOWins}`
+            btnPlayGame.textContent = 'Play Again?'
         }
     
         tie = () => {
@@ -188,6 +190,7 @@ const game = (() => {
                 gridBox.classList.add('disabled')
             });
             btnPlayGame.classList.toggle('disabled')
+            btnPlayGame.textContent = 'Play Again?'
         }
     }
     
