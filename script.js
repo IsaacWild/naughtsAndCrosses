@@ -11,6 +11,8 @@ const game = (() => {
     const XWinsTag = document.querySelector('.XWinsTag')
     const OWinsTag = document.querySelector('.OWinsTag')
     const gameGrid = document.querySelector('.gridWrapper')
+    const inputPlayerX = document.getElementById('playerXName')
+    const inputPlayerO = document.getElementById('playerOName')
     
     function  render() {
         for (let i = 0; i < gamePlay.length; i++) {
@@ -51,9 +53,14 @@ const game = (() => {
     }
     
     function gameStart(){
-        const allGridBoxes = document.querySelectorAll('.gridBox')
         btnPlayGame.addEventListener('click', () => {
-            playerXName = document.querySelector('#playerXName').value;
+            checkStart()
+        });
+    }
+
+    function checkStart(){
+        const allGridBoxes = document.querySelectorAll('.gridBox')
+        playerXName = document.querySelector('#playerXName').value;
             playerOName = document.querySelector('#playerOName').value;
             if(gameWon == true){
                 clear()
@@ -84,8 +91,7 @@ const game = (() => {
                     }
                 }
             }
-        });
-    }
+    };
     
     function checkWin(){
         const allGridBoxes = document.querySelectorAll('.gridBox')
@@ -194,6 +200,18 @@ const game = (() => {
         }
     }
     
+    inputPlayerX.addEventListener('keydown', (e) => {
+        if (e.key === "Enter") {
+            checkStart();
+        }
+    })
+
+    inputPlayerO.addEventListener('keydown', (e) => {
+        if (e.key === "Enter") {
+            checkStart();
+        }
+    })
+
     render()
     gameStart()
 })();
